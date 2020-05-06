@@ -24,11 +24,11 @@ Segment.prototype.init = function init(name, rootId, parentId) {
   if (typeof name != 'string')
     throw new Error('Segment name must be of type string.');
 
-  var traceId = rootId || '1-' + Math.round(new Date().getTime() / 1000).toString(16) + '-' +
+  var startTime = SegmentUtils.getCurrentTime();
+  var traceId = rootId || '1-' + Math.round(startTime).toString(16) + '-' +
     crypto.randomBytes(12).toString('hex');
 
   var id = crypto.randomBytes(8).toString('hex');
-  var startTime = SegmentUtils.getCurrentTime();
 
   this.trace_id = traceId;
   this.id = id;
