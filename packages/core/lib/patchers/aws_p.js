@@ -44,7 +44,7 @@ var captureAWS = function captureAWS(awssdk) {
 /**
  * Configures any AWS Client instance to automatically capture information for the segment.
  * For manual mode, a param with key called 'Segment' is required as a part of the AWS
- * call paramaters, and must reference a Segment or Subsegment object.
+ * call parameters, and must reference a Segment or Subsegment object.
  * @param {AWS.Service} service - An instance of a AWS service to wrap.
  * @alias module:aws_p.captureAWSClient
  * @returns {AWS.Service}
