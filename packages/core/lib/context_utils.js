@@ -33,7 +33,7 @@ var contextUtils = {
 
   /**
    * Resolves the segment or subsegment given manual mode and params on the call required.
-   * @param [Segment|Subsegment] segment - The segment manually provided via params.XraySegment, if provided.
+   * @param {Segment|Subsegment} [segment] - The segment manually provided via params.XraySegment, if provided.
    * @returns {Segment|Subsegment}
    * @alias module:context_utils.resolveManualSegmentParams
    */
@@ -63,7 +63,7 @@ var contextUtils = {
 
   /**
    * Resolves the segment or subsegment given manual or automatic mode.
-   * @param [Segment|Subsegment] segment - The segment manually provided, if provided.
+   * @param {Segment|Subsegment} [segment] - The segment manually provided, if provided.
    * @returns {Segment|Subsegment}
    * @alias module:context_utils.resolveSegment
    */
@@ -102,8 +102,8 @@ var contextUtils = {
 
   /**
    * Sets the current segment or subsegment.  For use with in automatic mode only.
-   * @param [Segment|Subsegment] segment - The sub/segment to set.
-   * @returns {Segment|Subsegment}
+   * @param {Segment|Subsegment} segment - The sub/segment to set.
+   * @returns {void}
    * @alias module:context_utils.setSegment
    */
 
@@ -118,7 +118,7 @@ var contextUtils = {
 
   /**
    * Returns true if in automatic mode, otherwise false.
-   * @returns {Segment|Subsegment}
+   * @returns {boolean}
    * @alias module:context_utils.isAutomaticMode
    */
 
